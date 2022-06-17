@@ -7,7 +7,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
 form_data_views = APIRouter()
-templates = Jinja2Templates(directory="src/view/templates/")
+templates = Jinja2Templates(directory="view/templates/")
 
 
 @form_data_views.get('/', response_class=HTMLResponse)

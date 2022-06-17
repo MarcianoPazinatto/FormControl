@@ -6,7 +6,7 @@ from src.view.form_view import form_data_views
 
 app = FastAPI()
 app.include_router(form_data_views)
-app.mount("/static", StaticFiles(directory="src/static"), name="static")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 if __name__ == '__main__':
-    uvicorn.run(app, debug=True)
+    uvicorn.run(app, port=5000, debug=True)
