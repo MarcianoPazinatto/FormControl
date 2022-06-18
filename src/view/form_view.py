@@ -1,4 +1,3 @@
-
 from fastapi import Depends, UploadFile, File
 from src.model.form_model import AdvancedForm
 from fastapi import APIRouter, Request, Form
@@ -27,7 +26,9 @@ async def post_basic_form(request: Request, username: str = Form(...), password:
     print(f'password: {password}')
     content = await file.read()
     print(content)
-    return templates.TemplateResponse("basicform.html", {"request": request})
+    return templates.TemplateResponse("basicform.html", {"request": request,
+                                                         "username": username,
+                                                         "password": password})
 
 
 @form_data_views.get('/advanced', response_class=HTMLResponse)
@@ -38,4 +39,9 @@ def get_form(request: Request):
 @form_data_views.post('/advanced', response_class=HTMLResponse)
 def post_form(request: Request, form_data: AdvancedForm = Depends(AdvancedForm.as_form)):
     print(form_data)
-    return templates.TemplateResponse("advancedform.html", {"request": request})
+    print(form_data.username)
+    username = form_data.username
+    password = form_data.password
+    return templates.TemplateResponse("advancedform.html", {"request": request,
+                                                            "username": username,
+                                                            "password": password})

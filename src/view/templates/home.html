@@ -1,6 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
-    <h1> Welcome! </h1>
-</div>
+<html>
+    <head>
+        <title>Home</title>
+        <link href="{{ url_for('static', path='../static/styles.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome!</h1>
+            <div>
+                <p class="response">This project aims to understand the functioning of an html form within
+                    FastAPI, both obtaining data and the return response to HTML.</p>
+            </div>
+            <div class="mb-3">
+                <img class="img-fluid img-brent" src="../static/brent.gif">
+            </div>
+        </div>
+    </body>
+</html>
 {% endblock %}

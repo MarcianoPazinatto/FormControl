@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>Advanced Form</title>
-<!--        <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">-->
+        <link href="{{ url_for('static', path='../static/styles.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
     </head>
     <body>
@@ -13,13 +13,18 @@
                 <form method="POST" enctype="multipart/form-data">
                     <div class="col-md-6">
                         <label class="form-label" for="username">Username:</label><br>
-                        <input class="form-control" type="text" id="username" name="username"><br>
+                        <input required class="form-control" type="text" id="username" name="username"><br>
                         <label class="form-label" for="password">Password:</label><br>
-                        <input class="form-control" type="password" id="password" name="password"><br>
+                        <input required class="form-control" type="password" id="password" name="password"><br>
                         <input  class="form-control form-control-sm" type="file" name="file"><br>
                         <input class="btn btn-primary" type="submit" value="Submit">
                     </div>
                 </form>
+            </div>
+
+            <div>
+                    <p class="response">Username: <strong>{{ username }}</strong></p>
+                    <p class="response">Password: <strong>{{ password }}</strong></p>
             </div>
         </div>
     </body>
