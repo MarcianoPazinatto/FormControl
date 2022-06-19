@@ -9,8 +9,8 @@
 
 
 ## Technologies Used
-<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-
+![image](https://img.shields.io/badge/FastAPI-3776AB?style=for-the-badge&logo=FastAPI&logoColor=white)
+![image](https://img.shields.io/badge/Python-87cefa?style=for-the-badge&logo=python&logoColor=white)
 
 ## Screenshots
 * Unfilled values
@@ -21,6 +21,15 @@
 
 
 ## Setup
+
+* Step 1:
+<h5>Create a Pipenv Enviroment</h5>
+* Step 2:
+<h5>In terminal, type it: <i>pipenv install</i> </h5>
+<h5>With this we will install all the necessary libraries, in the environment. </h5>
+* Step 3
+<h5>Run app.py file</h5>
+
 
 
 
